@@ -22,6 +22,8 @@ phrases = phrases_open.read().splitlines()
 phrases = list(filter(None, phrases))
 random.shuffle(phrases)
 
+bot.remove_command('help')
+
 @bot.command()
 async def troll(ctx, victim):
     await ctx.message.delete()
@@ -80,7 +82,7 @@ async def disable(ctx):
     await ctx.send("Траль-лист очищен, тралинг выключен")
 
 @bot.command()
-async def helb(ctx):
+async def help(ctx):
     await ctx.message.delete()
     helpMessage = "Помощь:\n"
     helpMessage += "troll <упоминание> - добавляет цель в траль лист\n"
