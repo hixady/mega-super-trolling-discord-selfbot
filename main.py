@@ -80,7 +80,7 @@ async def disable(ctx):
     await ctx.send("Траль-лист очищен, тралинг выключен")
 
 @bot.command()
-async def help(ctx):
+async def helb(ctx):
     await ctx.message.delete()
     helpMessage = "Помощь:\n"
     helpMessage += "troll <упоминание> - добавляет цель в траль лист\n"
