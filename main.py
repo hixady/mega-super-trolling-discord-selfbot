@@ -79,6 +79,19 @@ async def disable(ctx):
     trolllist.clear()
     await ctx.send("Траль-лист очищен, тралинг выключен")
 
+@bot.command()
+async def help(ctx):
+    await ctx.message.delete()
+    helpMessage = "Помощь:\n"
+    helpMessage += "troll <упоминание> - добавляет цель в траль лист\n"
+    helpMessage += "untroll <упоминание> - удаляет цель из траль листа\n"
+    helpMessage += "setDelay <время> - устанавливает задержку между сообщениями\n"
+    helpMessage += "listTrolls - показывает траль-лист\n"
+    helpMessage += "clearTrolls - очищает траль-лист\n"
+    helpMessage += "enable - запускает тралинг\n"
+    helpMessage += "disable - очищает траль-лист и выключает тралинг\n"
+    await ctx.send(helpMessage)
+
 
 
 bot.run(token)
